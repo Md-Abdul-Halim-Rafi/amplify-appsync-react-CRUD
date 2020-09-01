@@ -3,11 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import Dotenv from "dotenv";
 
 import Amplify from "aws-amplify";
 import config from "./aws-exports";
 
 Amplify.configure(config);
+
+Dotenv.config();
 
 ReactDOM.render(
   <React.StrictMode>

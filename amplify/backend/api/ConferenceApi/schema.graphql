@@ -1,6 +1,6 @@
 type Talk
 @model
-@key(name: "bycreatedAt", fields: ["createdAt"], queryField: "listTalks") {
+@auth(rules: [{ allow: groups, groups: ["Admin"], queries: null }]) {
   id: ID!
   clientId: ID
   name: String!
